@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2021 Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_50"
+    android:clickable="true"
+    android:focusable="true"
+    >
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineLeft"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineRight"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineTop"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineBottom"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="@id/guideLineBottom"
+        app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+        app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+        app:layout_constraintTop_toTopOf="@id/guideLineTop"
+        >
+
+        <RelativeLayout
+            android:id="@+id/layNestedRoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blueExtraDark"
+            app:layout_constraintBottom_toBottomOf="@id/guideLineBottom"
+            app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            app:layout_constraintTop_toTopOf="@id/guideLineTop"
+            app:layout_constraintVertical_bias="0.0"
+            >
+
+            <LinearLayout
+                android:id="@+id/testCasesLay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/main_margin_24dp"
+                android:layout_marginTop="@dimen/main_margin_16dp"
+                android:orientation="horizontal"
+                >
+
+                <CheckBox
+                    android:id="@+id/chbTestCases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:buttonTint="@color/white"
+                    android:paddingStart="@dimen/main_margin_16dp"
+                    android:paddingEnd="@dimen/main_margin_8dp"
+                    android:text="@string/settings__test_cases_mode"
+                    android:textColor="@color/white"
+                    />
+
+                <TextView
+                    android:id="@+id/tvSelectTestCases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/main_margin_24dp"
+                    android:padding="@dimen/main_margin_4dp"
+                    android:text="@string/settings__select_test_cases"
+                    android:textColor="@color/green"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    />
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/radioGroupCodec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/testCasesLay"
+                android:layout_marginTop="@dimen/main_margin_8dp"
+                android:orientation="vertical"
+                >
+
+                <RadioButton
+                    android:id="@+id/rbH264"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/main_margin_24dp"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/white"
+                    android:paddingStart="@dimen/main_margin_16dp"
+                    android:paddingEnd="@dimen/main_margin_16dp"
+                    android:text="@string/settings__h264"
+                    android:textColor="@color/white"
+                    />
+
+                <RadioButton
+                    android:id="@+id/rbH265"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/main_margin_24dp"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/white"
+                    android:paddingStart="@dimen/main_margin_16dp"
+                    android:paddingEnd="@dimen/main_margin_16dp"
+                    android:text="@string/settings__h265"
+                    android:textColor="@color/white"
+                    />
+
+            </RadioGroup>
+
+            <CheckBox
+                android:id="@+id/chbDecoderFallback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/radioGroupCodec"
+                android:layout_marginStart="@dimen/main_margin_24dp"
+                android:layout_marginTop="@dimen/main_margin_8dp"
+                android:buttonTint="@color/white"
+                android:paddingStart="@dimen/main_margin_8dp"
+                android:paddingEnd="@dimen/main_margin_8dp"
+                android:text="@string/settings__decoder_fallback"
+                android:textColor="@color/white"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layClips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chbDecoderFallback"
+                android:layout_marginStart="@dimen/main_margin_24dp"
+                android:layout_marginTop="@dimen/main_margin_4dp"
+                android:layout_marginEnd="@dimen/main_margin_72dp"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                >
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideLineCenter"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.4"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvTemplateClips"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/rect_clips_background"
+                    app:layout_constraintEnd_toEndOf="@id/guideLineCenter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvSelectedClipsLabel"
+                    />
+
+                <TextView
+                    android:id="@+id/tvSelectedClipsLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings__selected_clips_label"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guideLineCenter"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <dev.chromeos.videocompositionsample.presentation.ui.custom.CustomRecyclerView
+                    android:id="@+id/rvSelectedClips"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/rect_clips_background"
+                    android:fadeScrollbars="false"
+                    android:scrollbars="vertical"
+                    app:layout_constraintBottom_toBottomOf="@id/rvTemplateClips"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guideLineCenter"
+                    app:layout_constraintTop_toBottomOf="@id/tvSelectedClipsLabel"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <CheckBox
+                android:id="@+id/chbShowSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layClips"
+                android:layout_marginStart="@dimen/main_margin_24dp"
+                android:layout_marginTop="@dimen/main_margin_16dp"
+                android:layout_marginBottom="@dimen/main_margin_16dp"
+                android:buttonTint="@color/white"
+                android:paddingStart="@dimen/main_margin_8dp"
+                android:paddingEnd="@dimen/main_margin_8dp"
+                android:text="@string/settings__show_summary"
+                android:textColor="@color/white"
+                />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/main_margin_8dp"
+        android:src="@drawable/ic_baseline_close_24"
+        app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+        app:layout_constraintTop_toBottomOf="@id/guideLineTop"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/main_margin_8dp"
+        android:src="@drawable/ic_baseline_help_outline_24"
+        app:layout_constraintEnd_toStartOf="@id/ivClose"
+        app:layout_constraintTop_toTopOf="@id/ivClose"
+        app:layout_constraintBottom_toBottomOf="@id/ivClose"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabApply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin_16dp"
+        android:src="@drawable/ic_baseline_done_24"
+        app:backgroundTint="@color/green_dark"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@id/guideLineBottom"
+        app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

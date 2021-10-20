@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2021 Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/rlRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_10"
+        android:padding="@dimen/main_margin_24dp"
+        android:animateLayoutChanges="true"
+>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startPaddingGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@fraction/main_padding_large_start_percent"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endPaddingGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@fraction/main_padding_large_end_percent"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/main_margin_4dp"
+        app:cardUseCompatPadding="true"
+        android:layout_centerInParent="true"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/endPaddingGuideline"
+        app:layout_constraintStart_toStartOf="@+id/startPaddingGuideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/main_margin_24dp"
+            android:paddingLeft="@dimen/main_margin_16dp"
+            android:paddingRight="@dimen/main_margin_16dp"
+        >
+
+            <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/main_margin_16dp"
+                    android:gravity="center_horizontal"
+                    android:lineSpacingMultiplier="1.355"
+                    tools:text="@string/error__something_went_wrong"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/red"
+            />
+
+            <TextView
+                android:id="@+id/tvSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/main_margin_24dp"
+                android:layout_below="@+id/tvTitle"
+                android:gravity="center_horizontal"
+                android:lineSpacingMultiplier="1.355"
+                tools:text="@string/error__something_went_wrong"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/black_almost"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/main_margin_32dp"
+                android:layout_marginLeft="@dimen/main_margin_46dp"
+                android:layout_marginRight="@dimen/main_margin_46dp"
+                android:layout_marginBottom="@dimen/main_margin_32dp"
+                android:layout_below="@+id/tvSubtitle"
+                >
+
+                <Button
+                    android:id="@+id/btnNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Cancel"
+                    android:layout_marginStart="@dimen/main_margin_8dp"
+                    android:layout_marginEnd="@dimen/main_margin_8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btnYes"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+                <Button
+                    android:id="@+id/btnYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/OK"
+                    app:layout_constraintStart_toEndOf="@id/btnNo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

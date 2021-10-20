@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2021 Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rect_round_gray_90">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvEighth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin_2dp"
+        android:padding="@dimen/main_margin_4dp"
+        android:gravity="center"
+        android:text="@string/resolution__eighth"
+        android:textSize="@dimen/text_size_14sp"
+        android:textColor="@color/black_almost"
+        android:background="@drawable/rect_round_white_80"
+        android:layout_weight="1"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvQuarter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin_2dp"
+        android:padding="@dimen/main_margin_4dp"
+        android:gravity="center"
+        android:text="@string/resolution__quarter"
+        android:textSize="@dimen/text_size_14sp"
+        android:textColor="@color/black_almost"
+        android:layout_weight="1"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvHalf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin_2dp"
+        android:padding="@dimen/main_margin_4dp"
+        android:gravity="center"
+        android:text="@string/resolution__half"
+        android:textSize="@dimen/text_size_14sp"
+        android:textColor="@color/black_almost"
+        android:layout_weight="1"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFull"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin_2dp"
+        android:padding="@dimen/main_margin_4dp"
+        android:gravity="center"
+        android:text="@string/resolution__full"
+        android:textSize="@dimen/text_size_14sp"
+        android:textColor="@color/black_almost"
+        android:layout_weight="1"
+        />
+
+</LinearLayout>

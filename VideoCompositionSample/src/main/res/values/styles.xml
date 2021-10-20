@@ -1,0 +1,63 @@
+<!--
+  ~ Copyright (c) 2021 Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.Common">
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="AppTheme.Common.Dialog" parent="AppTheme.Common">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+    <style name="AppTheme.Common.Dialog.Gray" parent="AppTheme.Common.Dialog">
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@color/black_10</item>
+    </style>
+
+    <style name="AppTheme.DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/fade_in_150</item>
+        <item name="android:windowExitAnimation">@anim/fade_out_150</item>
+    </style>
+
+    <style name="AppSlider" parent="Theme.MaterialComponents">
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimary">@color/blueDark</item>
+        <item name="colorOnSurface">@color/gray</item>
+    </style>
+
+    <style name="AppSeekBar" parent="Widget.AppCompat.SeekBar.Discrete">
+        <item name="android:progressBackgroundTint">@color/white</item>
+        <item name="android:colorControlActivated">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppSummaryText" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textSize">@dimen/text_size_8sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+</resources>

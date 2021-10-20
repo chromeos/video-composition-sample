@@ -1,0 +1,104 @@
+/*
+ * Copyright (c) 2021 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
+
+    defaultConfig {
+
+        applicationId 'dev.chromeos.videocompositionsample.composition'
+        versionCode globalConfiguration["versionCode"]
+        versionName globalConfiguration["versionName"]
+
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+
+        testInstrumentationRunner globalConfiguration["testInstrumentationRunner"]
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+        }
+        release {
+            debuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+}
+
+dependencies {
+    def commonDependencies = rootProject.ext.commonDependencies
+    def presentationDependencies = rootProject.ext.presentationDependencies
+    def testDependencies = rootProject.ext.testDependencies
+
+    implementation commonDependencies.kotlinStdlib
+    api commonDependencies.javaxInject
+    api commonDependencies.gson
+
+    api dataDependencies.preference
+
+    implementation presentationDependencies.multidex
+    implementation presentationDependencies.appcompat
+    implementation presentationDependencies.recyclerview
+    implementation presentationDependencies.material
+    implementation presentationDependencies.constraintlayout
+    implementation presentationDependencies.expandablelayout
+    implementation presentationDependencies.exoplayer
+
+    implementation commonDependencies.dagger
+    kapt commonDependencies.daggerCompiler
+
+    implementation commonDependencies.rxjava
+    implementation commonDependencies.rxandroid
+
+    testImplementation testDependencies.junit
+    testImplementation testDependencies.testCore
+    testImplementation testDependencies.mockitoCore
+    testImplementation testDependencies.assertJ
+
+    androidTestImplementation testDependencies.testRules
+    androidTestImplementation testDependencies.testJUnit
+    androidTestImplementation testDependencies.testRunner
+
+    androidTestImplementation(testDependencies.espressoCore, {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}

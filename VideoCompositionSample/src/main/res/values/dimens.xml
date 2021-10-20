@@ -1,0 +1,50 @@
+<!--
+  ~ Copyright (c) 2021 Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+
+  <!-- Default screen margins -->
+  <dimen name="main_margin_2dp">2dp</dimen>
+  <dimen name="main_margin_4dp">4dp</dimen>
+  <dimen name="main_margin_8dp">8dp</dimen>
+  <dimen name="main_margin_10dp">10dp</dimen>
+  <dimen name="main_margin_16dp">16dp</dimen>
+  <dimen name="main_margin_24dp">24dp</dimen>
+  <dimen name="main_margin_32dp">32dp</dimen>
+  <dimen name="main_margin_46dp">46dp</dimen>
+  <dimen name="main_margin_56dp">56dp</dimen>
+  <dimen name="main_margin_72dp">72dp</dimen>
+  <dimen name="main_margin_96dp">96dp</dimen>
+
+  <dimen name="text_size_60sp">60sp</dimen>
+  <dimen name="text_size_46sp">46sp</dimen>
+  <dimen name="text_size_38sp">38sp</dimen>
+  <dimen name="text_size_32sp">32sp</dimen>
+  <dimen name="text_size_30sp">30sp</dimen>
+  <dimen name="text_size_24sp">24sp</dimen>
+  <dimen name="text_size_21sp">21sp</dimen>
+  <dimen name="text_size_20sp">20sp</dimen>
+  <dimen name="text_size_18sp">18sp</dimen>
+  <dimen name="text_size_16sp">16sp</dimen>
+  <dimen name="text_size_15sp">15sp</dimen>
+  <dimen name="text_size_14sp">14sp</dimen>
+  <dimen name="text_size_12sp">12sp</dimen>
+  <dimen name="text_size_8sp">8sp</dimen>
+
+  <fraction name="main_padding_large_start_percent" type="dimen">0.2</fraction>
+  <fraction name="main_padding_large_end_percent" type="dimen">0.8</fraction>
+
+</resources>

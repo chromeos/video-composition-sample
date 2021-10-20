@@ -1,0 +1,100 @@
+<!--
+  ~ Copyright (c) 2021 Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+
+    <string name="app_name">Video Composition Sample</string>
+
+    <string name="OK">OK</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+
+    <!--    player screen-->
+    <string name="player__title">Video Composition Sample</string>
+    <string name="player__time">Time</string>
+    <string name="player__alpha">Alpha</string>
+    <string name="player__success_export">The composition was successfully saved to.\n Do you want to share it?</string>
+    <string name="player__success_export_with_path">The composition was successfully saved to:\n%1$s\n Do you want to share it?</string>
+
+    <!--    resolutions-->
+    <string name="resolution__eighth">480x270</string>
+    <string name="resolution__quarter">960x540</string>
+    <string name="resolution__half">1920x1080</string>
+    <string name="resolution__full">3840x2160</string>
+
+    <!--    settings-->
+    <string name="settings__h264">Encoder Codec H.264</string>
+    <string name="settings__h265">Encoder Codec H.265</string>
+    <string name="settings__clip1">Clip1, 3840x2160, 30fps</string>
+    <string name="settings__clip2">Clip2, 1080x1920, 30fps</string>
+    <string name="settings__clip3">Clip3, 3840x2160, 60fps</string>
+    <string name="settings__clip4">Clip4, 1920x1080, 120fps</string>
+    <string name="settings__selected_clips_label">Selected Clips</string>
+    <string name="settings__show_summary">Show Summary</string>
+    <string name="settings__effect"><![CDATA[<u>effect: %1$d</u>]]></string>
+    <string name="settings__Effect">Effect: %1$d</string>
+    <string name="settings__effect1">Effect 1</string>
+    <string name="settings__effect2">Effect 2</string>
+    <string name="settings__effect3">Effect 3</string>
+    <string name="settings__effect4">Effect 4</string>
+    <string name="settings__decoder_fallback">DecoderFallback</string>
+    <string name="settings__decoder_fallback_label">DecoderFallback:</string>
+    <string name="settings__decoder_encoder_codec_label">Encoder Codec:</string>
+    <string name="settings__enabled">enabled</string>
+    <string name="settings__disabled">disabled</string>
+
+    <string name="settings__test_cases_mode">Test cases mode</string>
+    <string name="settings__select_test_cases">Select</string>
+    <string name="settings__title_test_cases">Test Cases</string>
+    <string name="settings__label_clips">Clips</string>
+    <string name="settings__label_effects">Effects</string>
+    <string name="settings__label_export">exp</string>
+
+    <!--    share-->
+    <string name="share__title">Share Composition</string>
+    <string name="share__subject">Composition</string>
+    <string name="share__text">Video Composition</string>
+
+    <!--    test cases-->
+    <string name="test_cases__finished">All Test cases completed</string>
+
+    <!--    messages-->
+    <string name="messages__no_comments">No comments</string>
+
+    <!--    help-->
+    <string name="help__decoder_fallback"><![CDATA[<b>DecoderFallback:</b> enable lower-priority decoders, if primary decoder initialization fails]]></string>
+    <string name="help__effects"><![CDATA[<b>Effects:</b> chose tracks for selected clip for playback and export]]></string>
+
+    <!--    errors-->
+    <string name="label__error">ERROR</string>
+    <string name="error__data_cannot_be_created">Data cannot be created</string>
+    <string name="error__data_cannot_be_saved">Data cannot be saved</string>
+    <string name="error__data_cannot_be_shared">Data cannot be shared</string>
+    <string name="error__something_went_wrong">Something went wrong</string>
+    <string name="error__can_not_start_export">Can\'t start export while not all tracks initialized</string>
+
+    <string name="error__settings_cannot_be_loaded">Settings cannot be loaded</string>
+    <string name="error__settings_cannot_be_saved">Settings cannot be saved</string>
+    <string name="error__settings_clip_max_limit">The number of clips cannot be more than %1$d</string>
+    <string name="error__settings_should_select_clip">You should select at least 1 clip</string>
+
+    <string name="error__test_cases_read_data">Error read test case data</string>
+    <string name="error__test_cases_empty_list">Can\'t process empty test case list</string>
+    <string name="error__test_cases_uninitialize">Can\'t uninitialize test case media composition #%1$d</string>
+    <string name="error__test_can_not_continue">Can\'t continue test cases, Codecs haven\'t been initialized</string>
+
+</resources>

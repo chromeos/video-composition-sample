@@ -21,7 +21,8 @@ preview. An export option for the composition is also provided.
  and duration and effect parameters.
  * Currently video clips are assumed to have a framerate set. Clips without a framerate will cause
  a crash on decode.
- * The media files included with this project are large (~600mb in total)
+ * The media files included with this project are large (~600mb in total). To checkout this repo
+ please use: [git-lfs](https://git-lfs.github.com/). Install git-lfs then run `git lfs install`.
 
 ## LICENSE
 ***

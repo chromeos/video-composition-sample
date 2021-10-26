@@ -14,7 +14,7 @@ The video composition sample decodes 4 video streams, applies optional effects t
 rotation, transparency, scaling, colour filters, speed up, slow down - combines them in a realtime
 preview. An export option for the composition is also provided.
 
-<img alt="Screenshot of Video Composition Sample" src="https://github.com/chromeos/video-composition-sample/blob/main/docs/VideoCompositionSampleScreenshot.jpg" width="200" />
+<img alt="Screenshot of Video Composition Sample" src="https://github.com/chromeos/video-composition-sample/blob/main/docs/VideoCompositionSampleScreenshot.jpg" />
 
 ### Notes/Caveats
  * Effects are configured in MediaCompositionConfig.kt by setting a list of TrackEffects with start

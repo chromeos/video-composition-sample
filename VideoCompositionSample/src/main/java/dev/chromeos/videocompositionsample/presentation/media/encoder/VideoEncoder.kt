@@ -111,7 +111,7 @@ class VideoEncoder: Runnable {
             muxer: Muxer,
             onError: (e: Exception) -> Unit
     ) {
-        this.shader = Shader(context, "vertex_shader.shdr", "fragment_shader.shdr")
+        this.shader = Shader(context, "vertex_shader.glsl", "fragment_shader.glsl")
         this.glMediaData = glMediaData
         this.onError = onError
 

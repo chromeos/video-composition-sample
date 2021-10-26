@@ -71,7 +71,7 @@ class CompositionRenderer(private val context: Context,
 
     override fun onSurfaceCreated(p0: GL10?, p1: EGLConfig) {
 
-        shader = Shader(context, "vertex_shader.shdr", "fragment_shader.shdr")
+        shader = Shader(context, "vertex_shader.glsl", "fragment_shader.glsl")
 
         GLES30.glEnable(GLES30.GL_CULL_FACE)
         GLES30.glEnable(GLES30.GL_DEPTH_TEST)
